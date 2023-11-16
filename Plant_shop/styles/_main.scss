@@ -1,0 +1,21 @@
+@use "variables";
+
+main {
+  height: 810px;
+  //   background-color: variables.$second-color;
+  .background {
+    margin: 0;
+    background-image: url("./media/background1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    //   .background {
+    //     img {
+    //       width: 100%;
+    //       height: 700px;
+    //       object-fit: cover;
+    //     }
+    //   }
+  }
+}

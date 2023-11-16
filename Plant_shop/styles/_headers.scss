@@ -1,0 +1,124 @@
+@use "variables";
+
+header {
+  .top-block {
+    height: 45px;
+    background-color: variables.$second-color;
+
+    .content-container {
+      max-width: min(90%, 1260px);
+      padding: 0 2%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      height: 100%;
+
+      p,
+      .paragraph-block {
+        color: variables.$fourth-color;
+        font-family: variables.$first-font;
+        // font-size: clamp(8px, 4vw, 16px);
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        gap: 23px;
+      }
+      p {
+        font-weight: 600;
+        flex: 1 content;
+        text-align: center;
+      }
+
+      .paragraph-block {
+        display: flex;
+      }
+      .paragraph-block p:first-child {
+        font-weight: 400;
+      }
+      .paragraph-block p:last-child {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .bottom-block {
+    height: 61px;
+    .content-container {
+      max-width: min(90%, 1260px);
+      padding: 0 2%;
+      margin: 0 auto;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      letter-spacing: -0.6px;
+      font-family: variables.$first-font;
+
+      .logo-block {
+        font-size: 26px;
+        font-weight: 600;
+
+        p span:nth-child(1) {
+          color: variables.$second-color;
+        }
+
+        p span:nth-child(2) {
+          color: variables.$first-color;
+        }
+      }
+      nav {
+        color: variables.$first-color;
+        font-size: 17px;
+        font-weight: 400;
+        ul {
+          display: flex;
+          // gap: clamp(2rem, 6vw, 6rem);
+          gap: 6rem;
+          list-style: none;
+        }
+      }
+
+      .right-block {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 7.5%;
+        .search-block {
+          display: flex;
+          align-items: center;
+          input {
+            border: none;
+            width: 67px;
+            color: #979797;
+            font-size: 17px;
+            font-weight: 400;
+          }
+          button {
+            width: 22px;
+            height: 22px;
+            border: none;
+            background: variables.$fourth-color;
+          }
+        }
+
+        .search-block::after {
+          content: "";
+          display: inline-block;
+          width: 1px;
+          height: 30px;
+          background-color: #979797;
+          margin: 0 25px;
+        }
+
+        .basket-block {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          color: variables.$first-color;
+          font-size: 17px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
